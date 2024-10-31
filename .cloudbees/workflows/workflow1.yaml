@@ -1,0 +1,19 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: wf1
+jobs:
+  build:
+    steps:
+      - name: Say hello
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          sleep 100
+          echo "hello world.  ijojoio"
+on:
+  schedule:
+    - cron: '20 * * * *'
+    - cron: '22 * * * *'
+    - cron: '24 * * * *'
+    - cron: '26 * * * *'
+    - cron: '28 * * * *'
