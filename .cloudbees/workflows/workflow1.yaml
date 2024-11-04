@@ -16,7 +16,7 @@ on:
     - cron: 22 * * * *
     - cron: 24 * * * *
     - cron: 26 * * * *
-    - cron: 28 * * * *
+    - cron: 47 * * * *
   pull_request:
     branches:
       - main
