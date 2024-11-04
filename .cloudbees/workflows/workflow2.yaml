@@ -12,4 +12,4 @@ jobs:
           echo "hello world.  ijojoio"
 on:
   schedule:
-    - cron: 'ASDFASDFADSF21 * * * *'
+    - cron: '52 * * * *'
