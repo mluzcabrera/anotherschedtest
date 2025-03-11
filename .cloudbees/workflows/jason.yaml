@@ -3,35 +3,3 @@ kind: workflow
 name: My workflow
 permissions:
   id-token: read|write
-on:
-  push:
-    branches:
-      - main
-jobs:
-  bu      ild:
-    steps:
-      - name: checkout
-        uses: cloudbees-io/checkout@v1
-      - name: Hello
-        uses: docker://golang:1.22.4
-        shell: sh
-        run: |
-          echo "hello world"
-      - name: Build
-        uses: docker://golang:1.22.4
-        shell: sh
-        run: |
-          cd hello; go build; ls;
-      - id: testAction
-        name: Test publish-evidence-item action
-        uses: cloudbees-io/publish-evidence-item@v1
-        with:
-          content: |
-            ## Comments are titles for the content
-            - User values: user-defined text and markup could go here
-            ## Supported fields can be listed
-            - Run ID: ${{ cloudbees.run_id }}
-            - Version: ${{ cloudbees.version }}
-            ## SCM
-            - Branch: ${{ cloudbees.scm.branch}}
-            - SHA: ${{ cloudbees.scm.sha }}
