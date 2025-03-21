@@ -1,9 +1,11 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-permissions:
-  id-token: read|write
-b.  u:
+on:
+  workflow_dispatch:
+
+jobs:
+  u:
     steps:
       - name: checkout
         uses: cloudbees-io/checkout@v1
