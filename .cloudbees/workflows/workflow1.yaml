@@ -10,8 +10,3 @@ jobs:
         run: |
           sleep 100
           echo "hello world.  ijojoio"
-on:
-
-  pull_request:
-    branches:
-      - main
