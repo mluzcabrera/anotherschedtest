@@ -10,3 +10,9 @@ jobs:
         run: |
           sleep 100
           echo "hello world.  ijojoio"
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "**"
